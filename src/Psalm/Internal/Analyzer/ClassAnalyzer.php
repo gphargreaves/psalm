@@ -511,7 +511,7 @@ class ClassAnalyzer extends ClassLikeAnalyzer
                     if ($const->name->toLowerString() === 'class') {
                         IssueBuffer::maybeAdd(
                             new ReservedWord(
-                                'A class constant cannot be called \'class\'',
+                                'A class constant cannot be named \'class\'',
                                 new CodeLocation($this, $this->class),
                                 $this->fq_class_name
                             )
